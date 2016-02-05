@@ -1,3 +1,10 @@
+<!
+Index.php for TwitBoard. This is the app controller/router for the
+message posting app.
+
+Author: Landon Owens
+
+>
 <head>
 <link rel="stylesheet" href="css/twit.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
