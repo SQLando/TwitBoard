@@ -3,18 +3,15 @@
 /**
  * Silex App 
  * 
- * @copyright 2013 Lukasz Grzegorz Maciak
- * @author Lukasz Grzegorz Maciak (maciak.net) 
+ * @author: Landon Owens
+ *
  */
 class App 
 {
     /**
      * Bootstrap the Silex application by registering all providers and
      * services and returning a pre-configured Silex Application object.
-     * 
-     * @static
-     * @access public
-     * @return \Silex\Application A Silxex app object
+     *
      */
     public static function bootstrap()
     {
