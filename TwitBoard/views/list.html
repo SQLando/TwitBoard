@@ -1,0 +1,32 @@
+<!This html file will grab the post and username objects from the 
+controller and list  them out with username and timestamp as each post header
+above the message content. Each post is seperated with a line of underscores
+ >
+
+<head>
+</head>
+<div id = "MessageBoard">
+<table>
+<tr><td align ="center" >Welcome to the Twit Board:</td><td>{{username}}</td></tr>
+<tr><td> <form action = "index.php" method="post" >
+<textarea autofocus name="messageContent" COLS = 70 ></textarea>
+<input type = "hidden" value = "{{userID}}" name = "userID"/>
+<input type = "hidden" value = "{{username}}" name = "username"/>
+ <input type="submit" value = "Let the world know!">
+ </form>
+ </td></tr>
+{% for post in posts %}
+<tr>
+<tr><td align ="center">__________________________</td></tr>
+<tr><td style = "width: 150px"><b>{{ post.userName }}</b></td>
+<td style = "width: 150px">{{post.postTS|date('m/d H:i') }}</td></tr>
+<tr><td>{{ post.Content}}</td></tr>
+</tr>
+{% else %}
+<tr>
+<tr><td align ="center">___________________________</td></tr>
+<td colspan="3">absolutely no posts found</td>
+</tr>
+{% endfor %}
+</table>
+</div>
